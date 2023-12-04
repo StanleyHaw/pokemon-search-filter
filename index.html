@@ -1,13 +1,844 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>寶可夢篩選搜尋器｜輕鬆找輕鬆玩</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar-side">
+          <li class="navbar-item navbar-select-focus"><a href="#">寶可夢篩選搜尋器</a></li>
+          <li class="navbar-item"><a href="#">寶可夢規則列表製作</a></li>
+        </ul>
+        <ul class="navbar-side">
+          <li class="navbar-item">
+            <a href="#"><i class="fa-solid fa-gear"></i>偏好設定</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#"><i class="fa-solid fa-circle-question"></i>使用說明</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="title">
+        <h1>寶可夢篩選搜尋器</h1>
+      </section>
+      <section class="filter-control-display">
+        <h3 class="filter-title">屬性篩選器</h3>
+        <div class="filter-wrapper">
+          <div class="types-filter filter-group">
+            <div class="choose-type">
+              <label for="type-fire" class="toggle-button type-fire checkbox-selected">
+                <input type="checkbox" id="type-fire" class="type-button" />
+                <img src="./img/type/pokemon-type-fire.png" />
+                <p>火</p>
+              </label>
+              <label for="type-fighting" class="toggle-button type-fighting">
+                <input type="checkbox" id="type-fighting" class="type-button" />
+                <img src="./img/type/pokemon-type-fighting.png" />
+                <p>格鬥</p>
+              </label>
+              <label for="type-eletric" class="toggle-button type-eletric">
+                <input type="checkbox" id="type-eletric" class="type-button" />
+                <img src="./img/type/pokemon-type-eletric.png" />
+                <p>電</p>
+              </label>
+              <label for="type-bug" class="toggle-button type-bug">
+                <input type="checkbox" id="type-bug" class="type-button" />
+                <img src="./img/type/pokemon-type-bug.png" />
+                <p>蟲</p>
+              </label>
+              <label for="type-grass" class="toggle-button type-grass">
+                <input type="checkbox" id="type-grass" class="type-button" />
+                <img src="./img/type/pokemon-type-grass.png" />
+                <p>草</p>
+              </label>
+              <label for="type-flying" class="toggle-button type-flying">
+                <input type="checkbox" id="type-flying" class="type-button" />
+                <img src="./img/type/pokemon-type-flying.png" />
+                <p>飛行</p>
+              </label>
+              <label for="type-steel" class="toggle-button type-steel">
+                <input type="checkbox" id="type-steel" class="type-button" />
+                <img src="./img/type/pokemon-type-steel.png" />
+                <p>鋼</p>
+              </label>
+              <label for="type-ice" class="toggle-button type-ice">
+                <input type="checkbox" id="type-ice" class="type-button" />
+                <img src="./img/type/pokemon-type-ice.png" />
+                <p>冰</p>
+              </label>
+              <label for="type-water" class="toggle-button type-water">
+                <input type="checkbox" id="type-water" class="type-button" />
+                <img src="./img/type/pokemon-type-water.png" />
+                <p>水</p>
+              </label>
+              <label for="type-dragon" class="toggle-button type-dragon">
+                <input type="checkbox" id="type-dragon" class="type-button" />
+                <img src="./img/type/pokemon-type-dragon.png" />
+                <p>龍</p>
+              </label>
+              <label for="type-poison" class="toggle-button type-poison">
+                <input type="checkbox" id="type-poison" class="type-button" />
+                <img src="./img/type/pokemon-type-poison.png" />
+                <p>毒</p>
+              </label>
+              <label for="type-ghost" class="toggle-button type-ghost">
+                <input type="checkbox" id="type-ghost" class="type-button" />
+                <img src="./img/type/pokemon-type-ghost.png" />
+                <p>幽靈</p>
+              </label>
+              <label for="type-psychic" class="toggle-button type-psychic">
+                <input type="checkbox" id="type-psychic" class="type-button" />
+                <img src="./img/type/pokemon-type-psychic.png" />
+                <p>超能力</p>
+              </label>
+              <label for="type-fairy" class="toggle-button type-fairy">
+                <input type="checkbox" id="type-fairy" class="type-button" />
+                <img src="./img/type/pokemon-type-fairy.png" />
+                <p>妖精</p>
+              </label>
+              <label for="type-ground" class="toggle-button type-ground">
+                <input type="checkbox" id="type-ground" class="type-button" />
+                <img src="./img/type/pokemon-type-ground.png" />
+                <p>地面</p>
+              </label>
+              <label for="type-dark" class="toggle-button type-dark">
+                <input type="checkbox" id="type-dark" class="type-button" />
+                <img src="./img/type/pokemon-type-dark.png" />
+                <p>惡</p>
+              </label>
+              <label for="type-rock" class="toggle-button type-rock">
+                <input type="checkbox" id="type-rock" class="type-button" />
+                <img src="./img/type/pokemon-type-rock.png" />
+                <p>岩石</p>
+              </label>
+              <label for="type-normal" class="toggle-button type-normal">
+                <input type="checkbox" id="type-normal" class="type-button" />
+                <img src="./img/type/pokemon-type-normal.png" />
+                <p>一般</p>
+              </label>
+              <button class="selected-cleared-all-toggle button-m">選取/清除全部屬性</button>
+            </div>
+            <div class="advanced-setting">
+              <div class="advanced-setting-title">
+                <h4>進階設定</h4>
+                <i class="fa-solid fa-caret-up"></i>
+              </div>
+              <div class="combinations-filter setting-group">
+                <label for="all-type-combinations" class="">
+                  <input type="radio" name="combinations-filter" id="all-type-combinations" class="" checked />
+                  <p>篩選所選屬性的所有組合</p>
+                </label>
+                <label for="selected-type-combinations" class="">
+                  <input type="radio" name="combinations-filter" id="selected-type-combinations" class="" />
+                  <p>僅篩選所選屬性的組合</p>
+                </label>
+              </div>
+              <div class="amount-filter setting-group">
+                <label for="single-type" class="setting-flex">
+                  <input type="checkbox" name="amount-filter" id="single-type" class="" checked />
+                  <p>僅篩選單一屬性寶可夢</p>
+                </label>
+                <label for="dual-types" class="setting-flex">
+                  <input type="checkbox" name="amount-filter" id="dual-types" class="" checked />
+                  <p>僅篩選雙屬性寶可夢</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="abilities-filter filter-group">
+            <div class="abilities-filter-option">
+              <label for="all-abilities" class="option-flex">
+                <input type="radio" name="abilities-filter" id="all-abilities" class="" checked />
+                <p>所有特性</p>
+              </label>
+            </div>
+            <div class="abilities-filter-option">
+              <label for="classify-by-quantity" class="option-flex">
+                <input type="radio" name="abilities-filter" id="classify-by-quantity" class="" checked />
+                <p>選擇特定種類</p>
+              </label>
+              <div class="classify-by-quantity-option option-child-box">
+                <label for="classify-by-quantity" class="toggle-button only-one-quantity checkbox-selected">
+                  <input type="checkbox" name="abilities-classify-filter" id="classify-by-quantity" class="" checked />
+                  <p>只有一種特性的寶可夢</p>
+                </label>
+                <label for="classify-by-quantity" class="toggle-button two-kinds-quantity">
+                  <input type="checkbox" name="abilities-classify-filter" id="classify-by-quantity" class="" checked />
+                  <p>擁有兩種特性的寶可夢</p>
+                </label>
+                <label for="classify-by-quantity" class="toggle-button three-kinds-quantity">
+                  <input type="checkbox" name="abilities-classify-filter" id="classify-by-quantity" class="" checked />
+                  <p>擁有三種特性的寶可夢</p>
+                </label>
+              </div>
+            </div>
+            <div class="abilities-filter-option">
+              <label for="search-abilities" class="option-flex">
+                <input type="radio" name="abilities-filter" id="search-abilities" class="" checked />
+                <p>輸入特性名稱</p>
+                <textarea class="abilities-search-bar" id="ablitiy-value" placeholder="請輸入特性名稱"> </textarea>
+                <button class="button-m" id="ablitiy-submit"><i class="fa-solid fa-arrow-right"></i></button>
+              </label>
+              <div class="search-abilities-setting option-child-box">
+                <label for="single-type" class="setting-flex">
+                  <input type="checkbox" name="normal-hidden-option" id="single-type" class="" checked />
+                  <p>僅篩選此特性為一般特性的寶可夢</p>
+                </label>
+                <label for="dual-types" class="setting-flex">
+                  <input type="checkbox" name="normal-hidden-option" id="dual-types" class="" checked />
+                  <p>僅篩選此特性為隱藏特性的寶可夢</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="stats-filter filter-group">
+            <div class="stats-filter-option">
+              <label for="unlimited-stat" class="option-flex">
+                <input type="radio" name="stats-filter" id="unlimited-stat" class="" checked />
+                <p>不限</p>
+              </label>
+            </div>
+            <div class="stats-filter-option">
+              <label for="limited-stat" class="option-flex">
+                <input type="radio" name="stats-filter" id="limited-stat" class="" checked />
+                <p>篩選特定區間</p>
+              </label>
+              <div class="stats-option option-child-box">
+                <label for="stat-sum-filter" class="toggle-button sum-stat stat-option checkbox-selected">
+                  <input type="checkbox" name="stat-filter" id="stat-sum-filter" class="" checked />
+                  <p>種族值總和</p>
+                  <div class="stat-text-bar">
+                    <label class="stat-flex"
+                      >介於 <input type="number" class="stat-search-bar sum-min" max="255" min="1" placeholder="1" />
+                      ~
+                      <input type="number" class="stat-search-bar sum-max" max="255" min="1" placeholder="255" />
+                      之間
+                    </label>
+                    <button class="button-m"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </label>
+                <label for="stat-hp-filter" class="toggle-button hp-stat stat-option">
+                  <input type="checkbox" name="stat-filter" id="stat-hp-filter" class="" />
+                  <p>HP</p>
+                  <div class="stat-text-bar">
+                    <label class="stat-flex"
+                      >介於 <input type="number" class="stat-search-bar hp-min" max="255" min="1" placeholder="1" />
+                      ~
+                      <input type="number" class="stat-search-bar hp-max" max="255" min="1" placeholder="255" />
+                      之間
+                    </label>
+                    <button class="button-m"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </label>
+                <label for="stat-atk-filter" class="toggle-button atk-stat stat-option">
+                  <input type="checkbox" name="stat-filter" id="stat-atk-filter" class="" />
+                  <p>攻擊</p>
+                  <div class="stat-text-bar">
+                    <label class="stat-flex"
+                      >介於 <input type="number" class="stat-search-bar atk-min" max="255" min="1" placeholder="1" />
+                      ~
+                      <input type="number" class="stat-search-bar atk-max" max="255" min="1" placeholder="255" />
+                      之間
+                    </label>
+                    <button class="button-m"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </label>
+                <label for="stat-def-filter" class="toggle-button def-stat stat-option">
+                  <input type="checkbox" name="stat-filter" id="stat-def-filter" class="" />
+                  <p>防禦</p>
+                  <div class="stat-text-bar">
+                    <label class="stat-flex"
+                      >介於 <input type="number" class="stat-search-bar def-min" max="255" min="1" placeholder="1" />
+                      ~
+                      <input type="number" class="stat-search-bar def-max" max="255" min="1" placeholder="255" />
+                      之間
+                    </label>
+                    <button class="button-m"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </label>
+                <label for="stat-spa-filter" class="toggle-button spa-stat stat-option">
+                  <input type="checkbox" name="stat-filter" id="stat-spa-filter" class="" />
+                  <p>特攻</p>
+                  <div class="stat-text-bar">
+                    <label class="stat-flex"
+                      >介於 <input type="number" class="stat-search-bar spa-min" max="255" min="1" placeholder="1" />
+                      ~
+                      <input type="number" class="stat-search-bar spa-max" max="255" min="1" placeholder="255" />
+                      之間
+                    </label>
+                    <button class="button-m"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </label>
+                <label for="stat-spd-filter" class="toggle-button spd-stat stat-option">
+                  <input type="checkbox" name="stat-filter" id="stat-spd-filter" class="" />
+                  <p>特防</p>
+                  <div class="stat-text-bar">
+                    <label class="stat-flex"
+                      >介於 <input type="number" class="stat-search-bar spd-min" max="255" min="1" placeholder="1" />
+                      ~
+                      <input type="number" class="stat-search-bar spd-max" max="255" min="1" placeholder="255" />
+                      之間
+                    </label>
+                    <button class="button-m"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </label>
+                <label for="stat-spe-filter" class="toggle-button spe-stat stat-option">
+                  <input type="checkbox" name="stat-filter" id="stat-spe-filter" class="" />
+                  <p>速度</p>
+                  <div class="stat-text-bar">
+                    <label class="stat-flex"
+                      >介於 <input type="number" class="stat-search-bar spe-min" max="255" min="1" placeholder="1" />
+                      ~
+                      <input type="number" class="stat-search-bar spe-max" max="255" min="1" placeholder="255" />
+                      之間
+                    </label>
+                    <button class="button-m"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="moves-filter filter-group"></div>
+        </div>
+        <button class="display-collapse">
+          <p>收起<i class="fa-solid fa-caret-up"></i></p>
+        </button>
+      </section>
+      <section class="pokemon-filter">
+        <div class="filter-container">
+          <div class="filter-wrapper pokemon-name">
+            <div class="filter-name-group">
+              <div class="filter-title">
+                寶可夢<button class="button-mini"><i class="fa-solid fa-hand-sparkles"></i></button>
+              </div>
+              <ul class="filter-options-wrapper">
+                <li class="filter-option">朱紫版本內所有可使用的寶可夢</li>
+                <li class="filter-option">朱紫版本內所有可使用的寶可夢</li>
+                <li class="filter-option">朱紫版本內所有可使用的寶可夢</li>
+              </ul>
+            </div>
+          </div>
+          <div class="filter-wrapper pokemon-species">
+            <div class="filter-species-group">
+              <div class="filter-title">
+                屬性篩選器<button class="button-mini"><i class="fa-regular fa-trash-can"></i></button>
+              </div>
+              <ul class="filter-options-wrapper">
+                <li class="filter-option">所有屬性</li>
+                <li class="filter-option">
+                  篩選所選屬性的所有組合<button class="button-mini"><i class="fa-solid fa-xmark"></i></button>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-species-group">
+              <div class="filter-title">
+                特性篩選器<button class="button-mini"><i class="fa-regular fa-trash-can"></i></button>
+              </div>
+              <ul class="filter-options-wrapper">
+                <li class="filter-option">所有特性</li>
+              </ul>
+            </div>
+            <div class="filter-species-group">
+              <div class="filter-title">
+                種族值篩選器<button class="button-mini"><i class="fa-regular fa-trash-can"></i></button>
+              </div>
+              <ul class="filter-options-wrapper">
+                <li class="filter-option">不限種族值區間</li>
+              </ul>
+            </div>
+            <div class="filter-species-group">
+              <div class="filter-title">
+                招式篩選器<button class="button-mini"><i class="fa-regular fa-trash-can"></i></button>
+              </div>
+              <ul class="filter-options-wrapper">
+                <li class="filter-option">
+                  守住<button class="button-mini"><i class="fa-solid fa-xmark"></i></button>
+                </li>
+                <li class="filter-option">
+                  僅篩選同時都能習得所輸入的招式之寶可夢<button class="button-mini">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button class="create-filter-stat"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </section>
+      <section class="result-stats">
+        <p>一共搜尋到<span>100</span>隻符合條件的寶可夢</p>
+      </section>
+      <section class="filter-result-head">
+        <div class="result-head-fixed-container result-head-container">
+          <div class="result-title serial-number">
+            <div class="main-title">編號</div>
+          </div>
+          <div class="result-title pokemon-name">
+            <div class="main-title">寶可夢</div>
+            <div class="subtitle-group">
+              <div class="subtitle">圖像</div>
+              <div class="subtitle">名稱</div>
+              <div class="subtitle">地區型態</div>
+            </div>
+          </div>
+        </div>
+        <div class="result-head-flexible-container result-head-container">
+          <div class="result-title pokemon-types">
+            <div class="main-title">屬性</div>
+            <div class="subtitle-group">
+              <div class="subtitle">屬性一</div>
+              <div class="subtitle">屬性二</div>
+            </div>
+          </div>
+          <div class="result-title pokemon-abilities">
+            <div class="main-title">特性</div>
+            <div class="subtitle-group">
+              <div class="subtitle">特性一</div>
+              <div class="subtitle">特性二</div>
+              <div class="subtitle">隱藏特性</div>
+            </div>
+          </div>
+          <div class="result-title pokemon-stats">
+            <div class="main-title">種族值</div>
+            <div class="subtitle-group">
+              <div class="subtitle">HP</div>
+              <div class="subtitle">攻擊</div>
+              <div class="subtitle">防禦</div>
+              <div class="subtitle">特攻</div>
+              <div class="subtitle">特防</div>
+              <div class="subtitle">速度</div>
+              <div class="subtitle"><b>總和</b></div>
+            </div>
+          </div>
+          <div class="result-title pokemon-moves">
+            <div class="main-title">招式</div>
+            <div class="subtitle-group">
+              <div class="subtitle">守住</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="filter-result-body">
+        <div class="result-body-fixed-container result-body-container">
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0004</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/004.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>小火龍</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0005</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/005.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>火恐龍</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0006</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/006.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>噴火龍</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0023</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/023.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>阿柏蛇</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0024</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/024.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>阿柏怪</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0025</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/025.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>皮卡丘</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0026</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/026.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>雷丘</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0026</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/026-a.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>雷丘</p></div>
+            <div class="result result-regional-form"><p>阿羅拉</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0027</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/027.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>穿山鼠</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0027</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/027-a.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>穿山鼠</p></div>
+            <div class="result result-regional-form"><p>阿羅拉</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0028</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/028.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>穿山王</p></div>
+            <div class="result result-regional-form"><p>-</p></div>
+          </div>
+          <div class="result-identify">
+            <div class="result result-serial-number"><p>#0028</p></div>
+            <div class="result result-pokemon-picture"><img src="./img/028-a.png" alt="" /></div>
+            <div class="result result-pokemon-name"><p>穿山王</p></div>
+            <div class="result result-regional-form"><p>阿羅拉</p></div>
+          </div>
+        </div>
+        <div class="result-body-flexible-container result-body-container">
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-fire">
+                <img src="./img/type/pokemon-type-fire.png" />
+                <p>火</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>猛火</p></div>
+              <div class="result result-ability-hidden"><p>太陽之力</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-fire">
+                <img src="./img/type/pokemon-type-fire.png" />
+                <p>火</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>猛火</p></div>
+              <div class="result result-ability-hidden"><p>太陽之力</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-fire">
+                <img src="./img/type/pokemon-type-fire.png" />
+                <p>火</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>猛火</p></div>
+              <div class="result result-ability-hidden"><p>太陽之力</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-poison">
+                <img src="./img/type/pokemon-type-poison.png" />
+                <p>毒</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-double"><p>威嚇</p></div>
+              <div class="result result-ability-double"><p>蛻皮</p></div>
+              <div class="result result-ability-hidden"><p>緊張感</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-poison">
+                <img src="./img/type/pokemon-type-poison.png" />
+                <p>毒</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-double"><p>威嚇</p></div>
+              <div class="result result-ability-double"><p>蛻皮</p></div>
+              <div class="result result-ability-hidden"><p>緊張感</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-eletric">
+                <img src="./img/type/pokemon-type-eletric.png" />
+                <p>電</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>靜電</p></div>
+              <div class="result result-ability-hidden"><p>避雷針</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-eletric">
+                <img src="./img/type/pokemon-type-eletric.png" />
+                <p>電</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>靜電</p></div>
+              <div class="result result-ability-hidden"><p>避雷針</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-double type-eletric">
+                <img src="./img/type/pokemon-type-eletric.png" />
+                <p>電</p>
+              </div>
+              <div class="result result-type-double type-psychic">
+                <img src="./img/type/pokemon-type-psychic.png" />
+                <p>超能力</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>衝浪之尾</p></div>
+              <div class="result result-ability-hidden"><p>-</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-ground">
+                <img src="./img/type/pokemon-type-ground.png" />
+                <p>地面</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>沙隱</p></div>
+              <div class="result result-ability-hidden"><p>撥沙</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-single type-ground">
+                <img src="./img/type/pokemon-type-ground.png" />
+                <p>地面</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>沙隱</p></div>
+              <div class="result result-ability-hidden"><p>撥沙</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-double type-ice">
+                <img src="./img/type/pokemon-type-ice.png" />
+                <p>冰</p>
+              </div>
+              <div class="result result-type-double type-steel">
+                <img src="./img/type/pokemon-type-steel.png" />
+                <p>鋼</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>雪隱</p></div>
+              <div class="result result-ability-hidden"><p>撥雪</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+          <div class="result-species">
+            <div class="result-species-group pokemon-types">
+              <div class="result result-type-double type-ice">
+                <img src="./img/type/pokemon-type-ice.png" />
+                <p>冰</p>
+              </div>
+              <div class="result result-type-double type-steel">
+                <img src="./img/type/pokemon-type-steel.png" />
+                <p>鋼</p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-abilities">
+              <div class="result result-ability-single"><p>雪隱</p></div>
+              <div class="result result-ability-hidden"><p>撥雪</p></div>
+            </div>
+            <div class="result-species-group pokemon-stats">
+              <div class="result result-stat stat-hp"><p>39</p></div>
+              <div class="result result-stat stat-atk"><p>52</p></div>
+              <div class="result result-stat stat-def"><p>43</p></div>
+              <div class="result result-stat stat-spa"><p>60</p></div>
+              <div class="result result-stat stat-spd"><p>50</p></div>
+              <div class="result result-stat stat-spe"><p>65</p></div>
+              <div class="result result-stat stat-sum">
+                <p><b>309</b></p>
+              </div>
+            </div>
+            <div class="result-species-group pokemon-move">
+              <div class="result result-move-name">招式機</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>©2023 Designed by Stanley Haw</p>
+      </footer>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

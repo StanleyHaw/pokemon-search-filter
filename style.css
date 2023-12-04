@@ -1,96 +1,1002 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "noto sans TC", sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: #3c3c3c;
+}
+
+.type-fire {
+  background: #e62829 !important;
+  color: #ffffff;
+}
+.type-fire img {
+  padding-right: 6px;
+}
+
+.type-fighting {
+  background: #ff8001 !important;
+  color: #ffffff;
+}
+.type-fighting img {
+  padding-right: 6px;
+}
+
+.type-eletric {
+  background: #fac000 !important;
+  color: #ffffff;
+}
+.type-eletric img {
+  padding-right: 6px;
+}
+
+.type-bug {
+  background: #91a219 !important;
+  color: #ffffff;
+}
+.type-bug img {
+  padding-right: 6px;
+}
+
+.type-grass {
+  background: #3fa129 !important;
+  color: #ffffff;
+}
+.type-grass img {
+  padding-right: 6px;
+}
+
+.type-flying {
+  background: #81b9ef !important;
+  color: #ffffff;
+}
+.type-flying img {
+  padding-right: 6px;
+}
+
+.type-steel {
+  background: #60a1b8 !important;
+  color: #ffffff;
+}
+.type-steel img {
+  padding-right: 6px;
+}
+
+.type-ice {
+  background: #3ed8ff !important;
+  color: #ffffff;
+}
+.type-ice img {
+  padding-right: 6px;
+}
+
+.type-water {
+  background: #2980ef !important;
+  color: #ffffff;
+}
+.type-water img {
+  padding-right: 6px;
+}
+
+.type-dragon {
+  background: #5060e1 !important;
+  color: #ffffff;
+}
+.type-dragon img {
+  padding-right: 6px;
+}
+
+.type-poison {
+  background: #9141cb !important;
+  color: #ffffff;
+}
+.type-poison img {
+  padding-right: 6px;
+}
+
+.type-ghost {
+  background: #6f4170 !important;
+  color: #ffffff;
+}
+.type-ghost img {
+  padding-right: 6px;
+}
+
+.type-psychic {
+  background: #ee4179 !important;
+  color: #ffffff;
+}
+.type-psychic img {
+  padding-right: 6px;
+}
+
+.type-fairy {
+  background: #ef70ef !important;
+  color: #ffffff;
+}
+.type-fairy img {
+  padding-right: 6px;
+}
+
+.type-ground {
+  background: #915120 !important;
+  color: #ffffff;
+}
+.type-ground img {
+  padding-right: 6px;
+}
+
+.type-dark {
+  background: #50423e !important;
+  color: #ffffff;
+}
+.type-dark img {
+  padding-right: 6px;
+}
+
+.type-rock {
+  background: #afa981 !important;
+  color: #ffffff;
+}
+.type-rock img {
+  padding-right: 6px;
+}
+
+.type-normal {
+  background: #9fa19f !important;
+  color: #ffffff;
+}
+.type-normal img {
+  padding-right: 6px;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #6ddd39;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+button.button-mini {
+  padding: 0px 2px;
+  width: 20px;
+  height: auto;
+  margin-left: 4px;
+  border: none;
+  border-radius: 99px;
+  line-height: 20px;
+  font-weight: 800;
+  background: #dc2626;
+}
+button.button-mini i {
+  color: #ffffff;
+}
+button.button-mini:hover {
+  background: #ea7e7e;
+  cursor: pointer;
+}
+button.button-mini:active {
+  background: #861616;
+}
+button.button-mini:active i {
+  color: #50504f;
+}
+
+button.button-m {
+  padding: 4px;
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+}
+button.button-m:hover {
+  background: #f2f2f2;
+}
+button.button-m:active {
+  background: #d9d9d9;
+}
+
+textarea {
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+header nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 8px 16px;
+  background: #3c3c3c;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+header nav.navbar ul.navbar-side {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav.navbar ul.navbar-side li.navbar-item {
+  position: relative;
+  padding: 4px;
+  margin: 0 8px;
+}
+header nav.navbar ul.navbar-side li.navbar-item a {
+  color: #ffffff;
+}
+header nav.navbar ul.navbar-side li.navbar-item a i {
+  padding: 8px;
+}
+
+section.title {
+  padding: 24px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+section.filter-control-display {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  background: #f2f2f2;
+  max-width: 1000px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+section.filter-control-display h3.filter-title {
+  margin-top: 12px;
+  color: #dc2626;
 }
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+section.filter-control-display div.filter-wrapper {
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 12px;
+  width: 976px;
+  height: 300px;
+  overflow-y: scroll;
+}
+section.filter-control-display div.filter-wrapper label.checkbox-selected::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  outline: 3px #2563eb solid;
+  border: 2px transparent solid;
+  border-radius: 6px;
+}
+section.filter-control-display div.filter-wrapper div.filter-group {
+  display: none;
+  position: relative;
+  padding: 4px;
+  background: #ffffff;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+section.filter-control-display div.filter-wrapper div.types-filter {
+  display: none;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.choose-type {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  width: 70%;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.choose-type label.toggle-button {
+  position: relative;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.choose-type label.toggle-button input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.choose-type button.selected-cleared-all-toggle {
+  grid-column: span 6;
+  height: 31px;
+  margin: 4px;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.advanced-setting {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 30%;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.advanced-setting div.advanced-setting-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  padding-left: 12px;
+  width: 100%;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.advanced-setting label.setting-flex {
+  position: relative;
+  border-radius: 4px;
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.advanced-setting label.setting-flex p {
+  padding-left: 8px;
+}
+section.filter-control-display div.filter-wrapper div.types-filter div.advanced-setting div.combinations-filter {
+  margin-bottom: 8px;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter {
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option label.option-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option label.option-flex p {
+  padding-left: 12px;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option label.option-flex textarea.abilities-search-bar {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  width: 360px;
+  height: 32px;
+  font-size: 16px;
+  padding: 4px 8px;
+  margin-left: 12px;
+  resize: none;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option label.option-flex button.button-m {
+  margin-left: 12px;
+  padding: 6px 10px;
+  background: #2563eb;
+  color: #ffffff;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option label.option-flex button.button-m:hover {
+  background: #5484ef;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option label.option-flex button.button-m:active {
+  background: #134cca;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option div.option-child-box {
+  margin: 8px 26px;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option div.classify-by-quantity-option {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option div.classify-by-quantity-option label.toggle-button {
+  position: relative;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option div.classify-by-quantity-option label.toggle-button input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option div.search-abilities-setting {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option div.search-abilities-setting label.setting-flex {
+  position: relative;
+  border-radius: 4px;
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+section.filter-control-display div.filter-wrapper div.abilities-filter div.abilities-filter-option div.search-abilities-setting label.setting-flex p {
+  padding-left: 8px;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.sum-stat {
+  grid-column: span 2;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.toggle-button {
+  position: relative;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.toggle-button input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.stat-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.stat-option div.stat-text-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 4px 8px;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.stat-option div.stat-text-bar label.stat-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.stat-option div.stat-text-bar label.stat-flex input.stat-search-bar {
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 32px;
+  font-size: 16px;
+  padding: 0 4px;
+  border: none;
+  border-bottom: 1px #50504f solid;
+  margin: 0 8px;
+  resize: none;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.stat-option div.stat-text-bar label.stat-flex input.stat-search-bar:focus {
+  outline: none;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.stat-option div.stat-text-bar button.button-m {
+  margin-left: 12px;
+  padding: 6px 10px;
+  background: #2563eb;
+  color: #ffffff;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.stat-option div.stat-text-bar button.button-m:hover {
+  background: #5484ef;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.stats-option label.stat-option div.stat-text-bar button.button-m:active {
+  background: #134cca;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option label.option-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option label.option-flex p {
+  padding-left: 12px;
+}
+section.filter-control-display div.filter-wrapper div.stats-filter div.stats-filter-option div.option-child-box {
+  margin: 8px 26px;
+}
+section.filter-control-display button.display-collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-radius: 0 0 12px 12px;
+}
+section.filter-control-display button.display-collapse:hover {
+  background: #d9d9d9;
+}
+section.filter-control-display button.display-collapse i {
+  padding-left: 8px;
 }
 
-.card {
-  padding: 2em;
+section.pokemon-filter {
+  margin: 0 18px;
+  margin-bottom: 20px;
 }
-
-.read-the-docs {
-  color: #888;
+section.pokemon-filter div.filter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
 }
-
-button {
+section.pokemon-filter div.filter-container div.filter-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+  border-radius: 12px;
+  background: #1f1f1f;
+  height: 80px;
+  box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+  overflow: scroll;
+}
+section.pokemon-filter div.filter-container div.pokemon-name {
+  min-width: 408px;
+  width: auto;
+}
+section.pokemon-filter div.filter-container div.pokemon-name div.filter-name-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+section.pokemon-filter div.filter-container div.pokemon-name div.filter-name-group div.filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 392px;
+  width: auto;
+  padding: 4px 8px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background: #ffffff;
+  font-size: 12px;
+  margin: 4px;
+  min-width: 64px;
+}
+section.pokemon-filter div.filter-container div.pokemon-name div.filter-name-group ul.filter-options-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+section.pokemon-filter div.filter-container div.pokemon-name div.filter-name-group ul.filter-options-wrapper li.filter-option {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  width: auto;
+  height: 28px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 12px;
+  margin: 4px;
+  min-width: 64px;
+  white-space: nowrap;
+}
+section.pokemon-filter div.filter-container div.pokemon-species {
+  position: relative;
+  width: 100%;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group div.filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+  width: auto;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin: 4px;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group:nth-child(1) div.filter-title {
+  background: #ff3c12;
+  color: #ffffff;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group:nth-child(1) ul.filter-options-wrapper li.filter-option {
+  background: #ffcfc5;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group:nth-child(2) div.filter-title {
+  background: #ff9314;
+  color: #ffffff;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group:nth-child(2) ul.filter-options-wrapper li.filter-option {
+  background: #ffe5c7;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group:nth-child(3) div.filter-title {
+  background: #13b440;
+  color: #ffffff;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group:nth-child(3) ul.filter-options-wrapper li.filter-option {
+  background: #e3fcea;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group:nth-child(4) div.filter-title {
+  background: #7e60fd;
+  color: #ffffff;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group:nth-child(4) ul.filter-options-wrapper li.filter-option {
+  background: #e4deff;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group ul.filter-options-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+section.pokemon-filter div.filter-container div.pokemon-species div.filter-species-group ul.filter-options-wrapper li.filter-option {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 12px;
+  margin: 4px;
+  min-width: 64px;
+  white-space: nowrap;
+}
+section.pokemon-filter div.filter-container button.create-filter-stat {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 56px;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease;
+}
+section.pokemon-filter div.filter-container button.create-filter-stat:hover {
+  box-shadow: 0px 0px 24px 3px rgba(37, 99, 235, 0.3);
+  color: #2563eb;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+section.pokemon-filter div.filter-container button.create-filter-stat:active {
+  background: #d9d9d9;
+  box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+section.result-stats {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px;
+  margin: 12px 20px;
 }
+section.result-stats p {
+  font-size: 16px;
+  color: #d9d9d9;
+  letter-spacing: 1px;
+}
+section.result-stats p span {
+  padding: 0 4px;
+}
+
+section.filter-result-head {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0 18px;
+  margin-bottom: 4px;
+}
+section.filter-result-head::after {
+  position: absolute;
+  content: "";
+  right: 0px;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  border-radius: 0 12px 12px 0;
+  background: #f2f2f2;
+}
+section.filter-result-head div.result-head-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 12px;
+  background: #f2f2f2;
+}
+section.filter-result-head div.result-head-fixed-container {
+  position: relative;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 10px 0 5px -5px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title:first-child {
+  width: 80px;
+  height: 86px;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title:last-child {
+  width: 308px;
+  height: 86px;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title div.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  background: #ffffff;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title div.main-title:first-child {
+  height: 86px;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title div.subtitle-group {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title div.subtitle-group div.subtitle {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  background: #ffffff;
+  text-align: center;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title div.subtitle-group div.subtitle:first-child {
+  width: 80px;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title div.subtitle-group div.subtitle:nth-child(2) {
+  width: 128px;
+}
+section.filter-result-head div.result-head-fixed-container div.result-title div.subtitle-group div.subtitle:last-child {
+  width: 84px;
+}
+section.filter-result-head div.result-head-flexible-container {
+  position: relative;
+  width: 100%;
+  overflow: scroll;
+  border-radius: 0 12px 12px 0;
+}
+section.filter-result-head div.result-head-flexible-container::-webkit-scrollbar {
+  display: none;
+}
+section.filter-result-head div.result-head-flexible-container div.result-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+section.filter-result-head div.result-head-flexible-container div.result-title:nth-child(1) div.main-title {
+  background: #ff3c12;
+  color: #ffffff;
+}
+section.filter-result-head div.result-head-flexible-container div.result-title:nth-child(2) div.main-title {
+  background: #ff9314;
+  color: #ffffff;
+}
+section.filter-result-head div.result-head-flexible-container div.result-title:nth-child(3) div.main-title {
+  background: #13b440;
+  color: #ffffff;
+}
+section.filter-result-head div.result-head-flexible-container div.result-title:nth-child(4) div.main-title {
+  background: #7e60fd;
+  color: #ffffff;
+}
+section.filter-result-head div.result-head-flexible-container div.result-title div.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  width: auto;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  background: #ffffff;
+}
+section.filter-result-head div.result-head-flexible-container div.result-title div.subtitle-group {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+}
+section.filter-result-head div.result-head-flexible-container div.result-title div.subtitle-group div.subtitle {
+  position: relative;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  background: #ffffff;
+  text-align: center;
+  flex-grow: 1;
+}
+section.filter-result-head div.result-head-flexible-container div.pokemon-types div.subtitle {
+  min-width: 100px;
+  width: auto;
+}
+section.filter-result-head div.result-head-flexible-container div.pokemon-abilities div.subtitle {
+  min-width: 120px;
+  width: auto;
+}
+section.filter-result-head div.result-head-flexible-container div.pokemon-stats div.subtitle {
+  min-width: 64px;
+  width: auto;
+}
+section.filter-result-head div.result-head-flexible-container div.pokemon-moves div.subtitle {
+  min-width: 90px;
+  width: auto;
+}
+
+section.filter-result-body {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0 18px;
+  margin-bottom: 20px;
+}
+section.filter-result-body::after {
+  position: absolute;
+  content: "";
+  right: 0px;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  border-radius: 0 12px 12px 0;
+  background: #f2f2f2;
+}
+section.filter-result-body div.result-body-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: #f2f2f2;
+}
+section.filter-result-body div.result {
+  height: 39px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+section.filter-result-body div.result-body-fixed-container {
+  position: relative;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 10px 0 5px -5px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+section.filter-result-body div.result-body-fixed-container div.result-identify {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+section.filter-result-body div.result-body-fixed-container div.result-identify div.result-serial-number {
+  width: 80px;
+}
+section.filter-result-body div.result-body-fixed-container div.result-identify div.result-pokemon-picture {
+  width: 80px;
+  overflow: hidden;
+}
+section.filter-result-body div.result-body-fixed-container div.result-identify div.result-pokemon-picture img {
+  position: relative;
+  top: 0;
+  width: 40px;
+  height: auto;
+}
+section.filter-result-body div.result-body-fixed-container div.result-identify div.result-pokemon-name {
+  width: 128px;
+}
+section.filter-result-body div.result-body-fixed-container div.result-identify div.result-regional-form {
+  width: 84px;
+}
+section.filter-result-body div.result-body-flexible-container {
+  position: relative;
+  width: 100%;
+  overflow: scroll;
+  border-radius: 0 12px 12px 0;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  padding-right: 12px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.result-species-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  gap: 8px;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.pokemon-types div.result-type-double {
+  width: 100px;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.pokemon-types div.result-type-single {
+  width: 208px;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.pokemon-abilities div.result-ability-double {
+  width: 120px;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.pokemon-abilities div.result-ability-single {
+  width: 248px;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.pokemon-abilities div.result-ability-hidden {
+  width: 120px;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.pokemon-stats div.result-stat {
+  width: 64px;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.pokemon-move {
+  min-width: 90px;
+  width: auto;
+}
+section.filter-result-body div.result-body-flexible-container div.result-species div.pokemon-move div.result-move-name {
+  min-width: 90px;
+  width: auto;
+}
+
+footer {
+  background: #50504f;
+  padding: 12px 0;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+  color: #d9d9d9;
+}/*# sourceMappingURL=style.css.map */
