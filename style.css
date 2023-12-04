@@ -357,7 +357,7 @@ section.filter-control-display div.filter-wrapper div.types-filter div.advanced-
   margin-bottom: 8px;
 }
 section.filter-control-display div.filter-wrapper div.abilities-filter {
-  display: none;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
@@ -445,7 +445,7 @@ section.filter-control-display div.filter-wrapper div.abilities-filter div.abili
   padding-left: 8px;
 }
 section.filter-control-display div.filter-wrapper div.stats-filter {
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
